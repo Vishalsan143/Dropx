@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>100% accurate word counter | Dropx</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- theme meta -->
+  <meta name="author" content="Dropx.live">
+  <meta name="description" content="Word Counter - An online tool to count words, characters, sentences, and paragraphs in a text. Get accurate word count statistics instantly.">
+  <meta name="keywords" content="word,counter,online,count,character,dropx">
+
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+	<!-- themefy-icon -->
+	<link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+	<!--Favicon-->
+	<link rel="icon" href="images/favicon.png" type="image/x-icon">
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+	<!-- Main Stylesheet -->
+	<link href="assets/style.css" rel="stylesheet" media="screen" />
+</head>
+
+<body>
+	<!-- header -->
+	<header class="banner overlay bg-cover" data-background="images/banner.jpg">
+		<nav class="navbar navbar-expand-md navbar-dark">
+			<div class="container">
+				<a class="navbar-brand px-2" href="index.html">Dropx</a>
+				<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navigation"
+					aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse text-center" id="navigation">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link text-dark" href="index.html">Word Counter</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" href="password_generator.html">Password Genrator</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" href="contact.html">Contact</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" href="terms&condtion.html">Terms & Conditions</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-dark" href="privacy.html">Privacy</a>
+						</li>
+            <li class="nav-item">
+							<a class="nav-link text-dark" href="about_us.html">About Us</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- banner -->
+		
+		<div class="container section">
+			<div class="row">
+				<div class=" col-lg-8  mx-auto">
+					<h1  class=" text-white mb-3">Count Your Words with Ease - Escape's Online Word Counter Tool</h1>
+					<p class="text-white mb-4">Need to count the words in a document or piece of text? Escape's online word counter tool is here to help! Our tool is fast, reliable, and easy to use. Simply paste your text or upload a file, and our tool will instantly give you an accurate word count. With Escape, you don't have to worry about manual counting or inaccurate results. Our tool is free, user-friendly, and accessible from anywhere with an internet connection. Count your words with ease and efficiency - try Escape's online word counter tool today!</p>
+					<div class="position-relative">
+						
+							  <style>
+                                         body {
+                                          font-family: sans-serif; 
+                                        }
+                                    
+                                      
+                                    
+                                        form {
+                                          display: flex;
+                                          flex-direction: column;
+                                          align-items: center;
+                                          margin-bottom: 1rem;
+                                        }
+                                    
+                                        label {
+                                          font-size: 1.25rem;
+										  color: aliceblue;
+                                        }
+                                    
+                                        textarea {
+                                          width: 100%;
+                                          font-size: 1.25rem;
+										 
+                                          padding: 0.5rem;
+                                          border: 2px solid rgb(73, 255, 216);
+                                          border-radius: 0.5rem;
+                                          resize: vertical;
+                                        }
+                                    
+                                        input[type="text"] {
+                                          width: 100%;
+										 
+                                          font-size: 1.25rem; 
+                                          padding: 0.5rem;
+                                          border: 2px solid rgb(73, 255, 216);
+                                          border-radius: 0.25rem;
+                                        }
+                                    
+                                    
+                                        span {
+                                          display: block;
+										  color: aliceblue;
+                                          /* font-size: 1.25rem; */
+                                          margin-bottom: 0.5rem;
+                                        }
+                                    
+                                        #animate-count {
+                                          font-size: 24px;
+                                          font-weight: bold;
+                                          color: green;
+                                          animation: count-up 1s ease-out;
+                                        }
+                                    
+                                        @keyframes count-up { 
+                                          from {
+                                            color: red;
+                                          }
+                                          to {
+                                            color: green;
+                                          }
+                                        } 
+                                      </style> 
+                                      <form>
+                                        <textarea placeholder="Enter your text to count words with 100% accuracy" id="text" rows="10" cols="50"></textarea>
+                                    
+                                        <label id=keyword for="keywords">Keywords (comma-separated):</label>
+                                        <input placeholder="(Optional) Count your keyword or frequency of words" type="text" id="keywords">
+                                      </form>
+                                      <div>
+                                        <span id="word-count">Words: 0</span>
+                                        <span id="char-count-including-spaces">Characters (including spaces): 0</span>
+                                        <span id="char-count-without-spaces">Characters (without spaces): 0</span>
+                                        <span id="sentence-count">Sentences: 0</span>
+                                        <span id="paragraph-count">Paragraphs: 0</span>
+                                        <span id="special-char-count">Special Characters: 0</span>
+                                        <span id="animate-count">Keywords</span>
+                                      </div>
+                                     <script>
+                                    
+                                    const textArea = document.getElementById("text");
+                                    const keywordsInput = document.getElementById("keywords");
+                                    const wordCount = document.getElementById("word-count");
+                                    const charCountIncludingSpaces = document.getElementById("char-count-including-spaces");
+                                    const charCountWithoutSpaces = document.getElementById("char-count-without-spaces");
+                                    const sentenceCount = document.getElementById("sentence-count");
+                                    const paragraphCount = document.getElementById("paragraph-count");
+                                    const specialCharCount = document.getElementById("special-char-count");
+                                    const animateCount = document.getElementById("animate-count");
+                                    
+                                    function countWords(text) {
+                                      const words = text.trim().split(/\s+/);
+                                      return words.length;
+                                    }
+                                    
+                                    function countCharacters(text) {
+                                      const charCount = text.length;
+                                      const charCountWithoutSpaces = text.replace(/\s+/g, "").length;
+                                      return {
+                                        charCount,
+                                        charCountWithoutSpaces
+                                      };
+                                    }
+                                    
+                                    function countSentences(text) {
+                                      const sentences = text.trim().split(/[.!?]+/);
+                                      return sentences.length;
+                                    }
+                                    
+                                    function countParagraphs(text) {
+                                      const paragraphs = text.trim().split(/\n+/);
+                                      return paragraphs.length;
+                                    }
+                                    
+                                    function countSpecialCharacters(text) {
+                                      const specialChars = text.replace(/[a-zA-Z0-9\s]/g, "").length;
+                                      return specialChars;
+                                    }
+                                    
+                                    function countKeywords(text, keywords) {
+                                      let count = 0;
+                                      keywords.forEach(keyword => {
+                                        const keywordRegex = new RegExp(`\\b${keyword}\\b`, "gi");
+                                        const matches = text.match(keywordRegex);
+                                        if (matches) {
+                                          count += matches.length;
+                                        }
+                                      });
+                                      return count;
+                                    }
+                                    
+                                    function animateCounter(endValue) {
+                                      let startValue = 0;
+                                      let currentVal = startValue;
+                                      const animationDuration = 1000;
+                                      const frameDuration = 20;
+                                      const totalFrames = Math.round(animationDuration / frameDuration);
+                                      const increment = Math.ceil((endValue - startValue) / totalFrames);
+                                      const timer = setInterval(() => {
+                                        currentVal += increment;
+                                        animateCount.textContent = currentVal;
+                                        if (currentVal >= endValue) {
+                                          clearInterval(timer);
+                                          animateCount.textContent = endValue;
+                                        }
+                                      }, frameDuration);
+                                    }
+                                    
+                                    function updateCounts() {
+                                      const text = textArea.value;
+                                      const keywordsInputValue = keywordsInput.value.trim();
+                                      const keywords = keywordsInputValue !== "" ? keywordsInputValue.split(",").map(keyword => keyword.trim()) : [];
+                                    
+                                      // Word count
+                                      const numWords = countWords(text);
+                                      wordCount.textContent = `Words: ${numWords}`;
+                                    
+                                      // Character counts
+                                      const { charCount, charCountWithoutSpaces: charCountNoSpaces } = countCharacters(text);
+                                      charCountIncludingSpaces.textContent = `Characters (including spaces): ${charCount}`;
+                                      charCountWithoutSpaces.textContent = `Characters (without spaces): ${charCountNoSpaces}`;
+                                    
+                                      // Sentence count
+                                      const numSentences = countSentences(text);
+                                      sentenceCount.textContent = `Sentences: ${numSentences}`;
+                                    
+                                      // Paragraph count
+                                      const numParagraphs = countParagraphs(text);
+                                      paragraphCount.textContent = `Paragraphs: ${numParagraphs}`;
+                                    
+                                      // Special character count
+                                      const numSpecialChars = countSpecialCharacters(text);
+                                      specialCharCount.textContent = `Special Characters: ${numSpecialChars}`;
+                                    
+                                      // Keyword count
+                                      if (keywords.length > 0) {
+                                        const numKeywordMatches = countKeywords(text, keywords);
+                                        animateCounter(numKeywordMatches);
+                                      } else {
+                                        animateCount.textContent = 0;
+                                      }
+                                    }
+                                    
+                                    textArea.addEventListener("input", updateCounts);
+                                    keywordsInput.addEventListener("input", updateCounts);
+                                    
+                                    </script>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /banner -->
+	</header>
+	<!-- /header -->
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="section px-3 bg-white shadow ">
+						<h2 class="mb-4">"Upgrade Your Substance with Departure's Internet based Word Counter Instrument: Track Word Count and Watchword Recurrence Without any problem"</h2>
+            <p>In the event that you're a blogger, content advertiser, or any individual who makes online substance, you know that streamlining your substance for web search tools is so significant. Two fundamental factors that can affect your substance's prosperity are word count and catchphrase recurrence. However, counting by hand can be time-consuming and error-prone. That's where Escape's online word counter tool comes in: it's a quick, accurate, and easy-to-use way to keep track of both of these things and make your content more search engine friendly.</p>
+
+            <h2>How to Use Escape's Online Word Counter Tool The online word counter tool is simple to use. Follow these straightforward advances:</h2>
+            
+            <p>Using Escape's online word counter tool is a breeze. Follow these simple steps:</p>
+            
+            <ol>
+              <li>Visit Escape's site and snap on the "Word Counter" instrument.</li>
+              <li>Paste your text into the text box</li>
+              <li>Enter the keywords you want to count the number of times they appear in your text in the "Keywords" box, separating them with commas</li>
+              <li>To determine the number of times each keyword appears in your text, select the "Count Keywords" button.</li>
+            </ol>
+            
+            <h2>Ways to utilize Escape's Web-based Word Counter Apparatus</h2>
+            
+            <p>To benefit from Departure's web-based word counter device, remember these tips:</p>
+            
+            <ul>
+              <li>Before you paste your text into the text box, check it twice.</li>
+              <li>Make sure to enter your keywords correctly and separate them with commas.</li>
+              <li>You can use our tool for different types of text, such as emails, blog posts, or academic papers.</li>
+              <li>Copy and paste your results into a document or spreadsheet to save them.</li>
+            </ul>
+            
+            <h2>Frequently Asked Questions</h2>
+            
+            <p>Here are some common questions about Escape's online word counter tool:</p>
+            
+            <dl>
+              <dt>Q: Is Escape's online word counter tool free to use?</dt>
+              <dd>A: Yes, it's completely free, and no registration is required.</dd>
+            
+              <dt>Q: Can I count words and keywords in different languages?</dt>
+              <dd>A: Yes, our tool can count words and keywords in any language.</dd>
+            
+              <dt>Q: Is Escape's online word counter tool accurate?</dt>
+              <dd>A: Yes, we use advanced algorithms to ensure accurate word counts and keyword frequencies.</dd>
+            
+              <dt>Q: Can I use Escape's online word counter tool on my mobile device?</dt>
+              <dd>A: Yes, it's optimized for mobile devices, so you can use it on any smartphone or tablet.</dd>
+            
+              <dt>Q: Does Escape's online word counter tool store my text or keyword data?</dt>
+              <dd>A: No, we don't store any of your text or keyword data. Your privacy and security are important to us.</dd>
+            </dl>
+            
+            <p>In conclusion, Escape's online word counter tool is a must-have for anyone who creates online content. It's a free and user-friendly way to count your words and keywords accurately and optimize your content for search engines. Give it a try today and take your content creation to the next level!</p>
+		
+		        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- /call to action -->
+  <section>
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="section px-3 bg-white shadow ">
+						<h2 class="mb-4">"Mastering the Art of Content Creation: The Power of Word Count and Word Counter Tools"</h2>
+            <p>As a content creator, you may have come across the phrase "word count" several times. But have you ever wondered why it's essential to keep track of the number of words in your content? A word count is simply the number of words in a given text or document, and it plays a crucial role in various industries.
+
+              For instance, if you're a blogger, you may have a target word count for each blog post, which can help you structure your content better and provide value to your audience. In the academic world, word count is often used to determine the length of a research paper or essay.
+              <p>
+              Additionally, word count is also essential for search engine optimization (SEO). Search engines like Google prefer content that is informative, engaging, and of a certain length. Therefore, keeping track of your word count can help you optimize your content for search engines and improve your visibility online.
+              
+              However, manually counting words can be a tedious and time-consuming task, especially if you're dealing with long documents. That's where word counter tools come in. Word counters are online tools that can help you count the number of words in your content with ease and accuracy.
+              </p><p>
+              A word counter tool like the one offered by Escape is a fast and user-friendly way to track both word count and keyword frequency. It allows you to paste your text into the text box or upload a file and quickly count the number of words. Additionally, you can use the tool to count the frequency of specific keywords in your content, which is essential for SEO.
+              
+              Keeping track of your word count is crucial for various industries, and word counter tools can make the task more manageable. Whether you're a blogger, student, or content marketer, using a word counter tool like Escape's can help you optimize your content and achieve your goals more efficiently.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+
+	<!-- call to action -->
+
+
+	<!-- footer -->
+	<footer class="section pb-4">
+		<div class="container">
+			
+			<div class="row align-items-center">
+				<div class="col-md-8 text-md-left text-center">
+					<p class="mb-md-0 mb-4">Copyright ©2023. All Rights Reserved. — Develope with love by  <a
+							href="www.Nostra.live">Dropx.live</a></p>
+				</div>
+				<div class="col-md-4 text-md-right text-center">
+					<ul class="list-inline">
+						<li class="list-inline-item"><a class="text-color d-inline-block p-2" href="about_us.html">About us</a></li>
+						<li class="list-inline-item"><a class="text-color d-inline-block p-2" href="terms&condtion.html">Terms & ConditionS</a></li>
+						<li class="list-inline-item"><a class="text-color d-inline-block p-2" href="privacy.html">Privacy</a>
+						</li>
+						<li class="list-inline-item"><a class="text-color d-inline-block p-2" href="contact.html">Contact
+						</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- /footer -->
+
+	<!-- ** JS Plugins Needed for the Project ** -->
+	<!-- jquiry -->
+	<script src="plugins/jquery/jquery-1.12.4.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="plugins/bootstrap/bootstrap.min.js"></script>
+	<!-- match-height JS -->
+	<script src="plugins/match-height/jquery.matchHeight-min.js"></script>
+	<!-- Main Script -->
+	<script src="assets/script.js"></script>
+</body>
+
+</html>
