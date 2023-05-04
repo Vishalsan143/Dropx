@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>100% accurate word counter | Dropx</title>
+<meta name="author" content="Dropx.live">
+  <meta name="description" content="Word Counter - An online tool to count words, characters, sentences, and paragraphs in a text. Get accurate word count statistics instantly.">
+  <meta name="keywords" content="word,counter,online,count,character,dropx">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7RCZTQHW7H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7RCZTQHW7H');
+</script>
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+  <meta name="theme-name" content="airspace">
+  <meta name="generator" content="Themefisher Airspace Template v1.0">
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+
+
+  <!-- bootstrap.min css -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- Ionic Icon Css -->
+  <link rel="stylesheet" href="plugins/Ionicons/css/ionicons.min.css">
+  <!-- animate.css -->
+  <link rel="stylesheet" href="plugins/animate-css/animate.css">
+  <!-- Magnify Popup -->
+  <link rel="stylesheet" href="plugins/magnific-popup/magnific-popup.css">
+  <!-- Slick CSS -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body id="body">
+
+<!-- Header Start -->
+<header class="navigation">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<nav class="navbar navbar-expand-lg p-0">
+					<a class="navbar-brand" href="index.html">
+						<img src="images/logo.png" width="25%" alt="Logo">
+					</a>
+
+					<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="ion-android-menu"></span>
+					</button>
+
+					
+					<div class="collapse navbar-collapse ml-auto" id="navbarsExample09">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="index.html">Home</a>
+							</li>
+              <li class="nav-item active">
+								<a class="nav-link" href="password_generator.html">Password generator</a>
+							</li>
+              <li class="nav-item active">
+								<a class="nav-link" href="about_us.html">About Us</a>
+							</li>
+              <li class="nav-item active">
+								<a class="nav-link" href="contact.html">Contact Us</a>
+							</li>
+              <li class="nav-item active">
+								<a class="nav-link" href="terms&condtion.html">Terms & Condition</a>
+							</li>
+              <li class="nav-item active">
+								<a class="nav-link" href="privacy.html">Privacy</a>
+							</li>
+							
+							
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header><!-- header close -->
+
+<!-- Slider Start -->
+<section class="slider">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="block">
+					<h1 class="animated fadeInUp">Count Your Words with Ease - Dropx's Online Word Counter Tool</h1>
+					<p class="animated fadeInUp">"100% accurate <strong>word Counter</strong>"</p>
+						</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Wrapper Start -->
+<section class="about section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<div class="block">
+					<div class="section-title">
+            <style>
+              body {
+               font-family: sans-serif; 
+               color: black;
+             }
+         
+           
+         
+             form {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               margin-bottom: 1rem;
+             }
+         
+             label {
+               font-size: 1.25rem;
+
+             }
+         
+             textarea {
+               width: 100%;
+               font-size: 1.25rem;
+
+               padding: 0.5rem;
+               border: 2px solid rgb(24, 24, 24);
+               border-radius: 0.5rem;
+               resize: vertical;
+             }
+         
+             input[type="text"] {
+               width: 100%;
+
+               font-size: 1.25rem; 
+               padding: 0.5rem;
+               border: 2px solid rgb(24, 24, 24);
+               border-radius: 0.25rem;
+             }
+         
+         
+             span {
+			display: inline-block;
+			
+			font-size: 1.25rem;
+			margin-right: 1rem;
+             }
+         
+             #animate-count {
+               font-size: 24px;
+               font-weight: bold;
+               color: green;
+               animation: count-up 1s ease-out;
+             }
+         
+             @keyframes count-up { 
+               from {
+                 color: red;
+               }
+               to {
+                 color: green;
+               }
+             } 
+           </style> 
+           <form>
+             <textarea placeholder="Enter your text to count words with 100% accuracy" id="text" rows="10" cols="50"></textarea>
+         
+             <label id=keyword for="keywords">Keywords (comma-separated):</label>
+             <input placeholder="(Optional) Count your keyword or frequency of words" type="text" id="keywords">
+           </form>
+           <div>
+             <span id="word-count">Words: 0</span>
+             <span id="char-count-including-spaces">Characters (including spaces): 0</span>
+             <span id="char-count-without-spaces">Characters (without spaces): 0</span>
+             <span id="sentence-count">Sentences: 0</span>
+             <span id="paragraph-count">Paragraphs: 0</span>
+             <span id="special-char-count">Special Characters: 0</span>
+             <span id="animate-count">Keywords</span>
+           </div>
+          <script>
+         
+         const textArea = document.getElementById("text");
+         const keywordsInput = document.getElementById("keywords");
+         const wordCount = document.getElementById("word-count");
+         const charCountIncludingSpaces = document.getElementById("char-count-including-spaces");
+         const charCountWithoutSpaces = document.getElementById("char-count-without-spaces");
+         const sentenceCount = document.getElementById("sentence-count");
+         const paragraphCount = document.getElementById("paragraph-count");
+         const specialCharCount = document.getElementById("special-char-count");
+         const animateCount = document.getElementById("animate-count");
+         
+         function countWords(text) {
+           const words = text.trim().split(/\s+/);
+           return words.length;
+         }
+         
+         function countCharacters(text) {
+           const charCount = text.length;
+           const charCountWithoutSpaces = text.replace(/\s+/g, "").length;
+           return {
+             charCount,
+             charCountWithoutSpaces
+           };
+         }
+         
+         function countSentences(text) {
+           const sentences = text.trim().split(/[.!?]+/);
+           return sentences.length;
+         }
+         
+         function countParagraphs(text) {
+           const paragraphs = text.trim().split(/\n+/);
+           return paragraphs.length;
+         }
+         
+         function countSpecialCharacters(text) {
+           const specialChars = text.replace(/[a-zA-Z0-9\s]/g, "").length;
+           return specialChars;
+         }
+         
+         function countKeywords(text, keywords) {
+           let count = 0;
+           keywords.forEach(keyword => {
+             const keywordRegex = new RegExp(`\\b${keyword}\\b`, "gi");
+             const matches = text.match(keywordRegex);
+             if (matches) {
+               count += matches.length;
+             }
+           });
+           return count;
+         }
+         
+         function animateCounter(endValue) {
+           let startValue = 0;
+           let currentVal = startValue;
+           const animationDuration = 1000;
+           const frameDuration = 20;
+           const totalFrames = Math.round(animationDuration / frameDuration);
+           const increment = Math.ceil((endValue - startValue) / totalFrames);
+           const timer = setInterval(() => {
+             currentVal += increment;
+             animateCount.textContent = currentVal;
+             if (currentVal >= endValue) {
+               clearInterval(timer);
+               animateCount.textContent = endValue;
+             }
+           }, frameDuration);
+         }
+         
+         function updateCounts() {
+           const text = textArea.value;
+           const keywordsInputValue = keywordsInput.value.trim();
+           const keywords = keywordsInputValue !== "" ? keywordsInputValue.split(",").map(keyword => keyword.trim()) : [];
+         
+           // Word count
+           const numWords = countWords(text);
+           wordCount.textContent = `Words: ${numWords}`;
+         
+           // Character counts
+           const { charCount, charCountWithoutSpaces: charCountNoSpaces } = countCharacters(text);
+           charCountIncludingSpaces.textContent = `Characters (including spaces): ${charCount}`;
+           charCountWithoutSpaces.textContent = `Characters (without spaces): ${charCountNoSpaces}`;
+         
+           // Sentence count
+           const numSentences = countSentences(text);
+           sentenceCount.textContent = `Sentences: ${numSentences}`;
+         
+           // Paragraph count
+           const numParagraphs = countParagraphs(text);
+           paragraphCount.textContent = `Paragraphs: ${numParagraphs}`;
+         
+           // Special character count
+           const numSpecialChars = countSpecialCharacters(text);
+           specialCharCount.textContent = `Special Characters: ${numSpecialChars}`;
+         
+           // Keyword count
+           if (keywords.length > 0) {
+             const numKeywordMatches = countKeywords(text, keywords);
+             animateCounter(numKeywordMatches);
+           } else {
+             animateCount.textContent = 0;
+           }
+         }
+         
+         textArea.addEventListener("input", updateCounts);
+         keywordsInput.addEventListener("input", updateCounts);
+         
+         </script>
+						
+					</div>
+					
+				</div>
+			</div><!-- .col-md-7 close -->
+			<div class="col-md-5">
+				<div class="block">
+					<img src="images/word-counter.jpg" alt="Img">
+				</div>
+			</div><!-- .col-md-5 close -->
+		</div>
+	</div>
+  <section class="page-wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="post post-single">
+             <h2 class="post-title">"Upgrade Your Substance with Departure's Internet based Word Counter Instrument: Track Word Count and Watchword Recurrence Without any problem"</h2>
+            
+            <div class="post-content post-excerpt">
+               <p>In the event that you're a blogger, content advertiser, or any individual who makes online substance, you know that streamlining your substance for web search tools is so significant. Two fundamental factors that can affect your substance's prosperity are word count and catchphrase recurrence. However, counting by hand can be time-consuming and error-prone. That's where Dropx's online word counter tool comes in: it's a quick, accurate, and easy-to-use way to keep track of both of these things and make your content more search engine friendly.</p>
+  
+              <h2>How to Use Dropx's Online Word Counter Tool The online word counter tool is simple to use. Follow these straightforward advances:</h2>
+              
+              <p>Using Dropx's online word counter tool is a breeze. Follow these simple steps:</p>
+              
+              <ol>
+                <li>Visit Dropx's site and snap on the "Word Counter" instrument.</li>
+                <li>Paste your text into the text box</li>
+                <li>Enter the keywords you want to count the number of times they appear in your text in the "Keywords" box, separating them with commas</li>
+                <li>To determine the number of times each keyword appears in your text, select the "Count Keywords" button.</li>
+              </ol>
+              
+              <h2>Ways to utilize Dropx's Web-based Word Counter Apparatus</h2>
+              
+              <p>To benefit from Departure's web-based word counter device, remember these tips:</p>
+              
+              <ul>
+                <li>Before you paste your text into the text box, check it twice.</li>
+                <li>Make sure to enter your keywords correctly and separate them with commas.</li>
+                <li>You can use our tool for different types of text, such as emails, blog posts, or academic papers.</li>
+                <li>Copy and paste your results into a document or spreadsheet to save them.</li>
+              </ul>
+              
+              <h2>Frequently Asked Questions</h2>
+              
+              <p>Here are some common questions about Dropx's online word counter tool:</p>
+              
+              <dl>
+                <dt>Q: Is Dropx's online word counter tool free to use?</dt>
+                <dd>A: Yes, it's completely free, and no registration is required.</dd>
+              
+                <dt>Q: Can I count words and keywords in different languages?</dt>
+                <dd>A: Yes, our tool can count words and keywords in any language.</dd>
+              
+                <dt>Q: Is Dropx's online word counter tool accurate?</dt>
+                <dd>A: Yes, we use advanced algorithms to ensure accurate word counts and keyword frequencies.</dd>
+              
+                <dt>Q: Can I use Dropx's online word counter tool on my mobile device?</dt>
+                <dd>A: Yes, it's optimized for mobile devices, so you can use it on any smartphone or tablet.</dd>
+              
+                <dt>Q: Does Dropx's online word counter tool store my text or keyword data?</dt>
+                <dd>A: No, we don't store any of your text or keyword data. Your privacy and security are important to us.</dd>
+              </dl>
+              
+              <p>In conclusion, Dropx's online word counter tool is a must-have for anyone who creates online content. It's a free and user-friendly way to count your words and keywords accurately and optimize your content for search engines. Give it a try today and take your content creation to the next level!</p>
+              <h2 class="post-title">"Mastering the Art of Content Creation: The Power of Word Count and Word Counter Tools"</h2>
+              <p>As a content creator, you may have come across the phrase "word count" several times. But have you ever wondered why it's essential to keep track of the number of words in your content? A word count is simply the number of words in a given text or document, and it plays a crucial role in various industries.
+  
+                For instance, if you're a blogger, you may have a target word count for each blog post, which can help you structure your content better and provide value to your audience. In the academic world, word count is often used to determine the length of a research paper or essay.
+                <p>
+                Additionally, word count is also essential for search engine optimization (SEO). Search engines like Google prefer content that is informative, engaging, and of a certain length. Therefore, keeping track of your word count can help you optimize your content for search engines and improve your visibility online.
+                
+                However, manually counting words can be a tedious and time-consuming task, especially if you're dealing with long documents. That's where word counter tools come in. Word counters are online tools that can help you count the number of words in your content with ease and accuracy.
+                </p><p>
+                A word counter tool like the one offered by Dropx is a fast and user-friendly way to track both word count and keyword frequency. It allows you to paste your text into the text box or upload a file and quickly count the number of words. Additionally, you can use the tool to count the frequency of specific keywords in your content, which is essential for SEO.
+                
+                Keeping track of your word count is crucial for various industries, and word counter tools can make the task more manageable. Whether you're a blogger, student, or content marketer, using a word counter tool like Dropx's can help you optimize your content and achieve your goals more efficiently.</p>
+        
+        
+            </div>
+</div><!-- .col-md-7 close -->
+</section>
+
+
+
+
+
+
+
+
+<!-- Content Start -->
+
+
+<!-- footer Start -->
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="footer-manu">
+					<ul>
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="contact.html">Contact us</a></li>
+						<li><a href="terms-condition.html">Terms & Condition</a></li>
+						<li><a href="privacy.html">Privacy</a></li>
+						<li><a href="pricing.html">Pricing</a></li>
+					</ul>
+				</div>
+				<p class="copyright mb-0">Copyright ©2023. All Rights Reserved. — Develope with love by <a
+						href="http://www.Dropx.live ">Dropx.live</a> 
+					
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!--Scroll to top-->
+<div id="scroll-to-top" class="scroll-to-top">
+	<span class="icon ion-ios-arrow-up"></span>
+</div>
+
+    <!-- 
+    Essential Scripts
+    =====================================-->
+
+
+    <!-- Main jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 3.1 -->
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- slick Carousel -->
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- filter -->
+    <script src="plugins/shuffle/shuffle.min.js"></script>
+    <script src="plugins/SyoTimer/jquery.syotimer.min.js"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+    <script src="plugins/google-map/map.js"></script>
+
+    <script src="js/script.js"></script>
+
+    </body>
+
+    </html>
+   
